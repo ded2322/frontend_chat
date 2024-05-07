@@ -1,0 +1,20 @@
+version: "3.8"
+
+services:
+  nginx:
+    build:
+      context: .
+      dockerfile: "Dockerfile.nginx"
+    container_name: front_nginx
+    ports:
+      - "80:80"
+    links:
+      - chat_frontend
+
+  chat_frontend:
+    build:
+      context: .
+      dockerfile: "Dockerfile"
+#    ports:
+#      - "5173:5173"
+    

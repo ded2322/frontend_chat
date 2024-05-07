@@ -1,0 +1,90 @@
+.chat_form {
+	height: 10%;
+	grid-area: f;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+
+	.input_text_message {
+		width: 60%;
+		height: auto;
+		margin: 3%;
+		margin-bottom: auto;
+		margin-bottom: .02%;
+		
+		.text_input{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-color: var(--two-main-bg-color);
+			border-radius: 10px;
+			a{
+				text-decoration: none;
+			}
+			.smile {
+				width: calc(var(--index) * 2);
+				height: calc(var(--index) * 2);
+				font-size: calc(var(--index) * 2);
+				margin: 0 2%;
+				color: #ccc;
+			}
+			textarea {
+				background-color: var(--two-main-bg-color);
+				color: var(--font-color);
+				resize: none;
+				height: 30px;
+				width: 100%;
+				border: none;
+				border-radius: 10px;
+				border: 2px solid #ccc;
+				padding: 2%;
+				font-size: calc(var(--index) * .9);
+				&::placeholder {
+					font-style: italic;
+				}
+				&:focus {
+					box-shadow: 0 0 2px 5px #2497d1;
+				}
+			} 
+			.send_btn {
+				position: relative;
+				background-color: #2497d1;
+				width: calc(var(--index) * 2);
+				height: calc(var(--index) * 2);
+				color: var(--two-main-bg-color);
+				border-radius: 50%;
+				margin: 0 1%;
+				.send {
+					position: absolute;
+					top: 55%;
+					left: 45%;
+					transform: translate(-50%, -50%);
+					width: 80%;
+					height: 80%;
+				}
+				&:active .send {
+					opacity: 0.7;
+					width: 75%;
+					height: 75%;
+				}
+			}
+		}
+	}
+}
+
+.emoji_picker {
+	position: relative;
+	top: -450px;
+	right: 0;
+	z-index: 30;
+}
+
+@media screen and (max-width: 500px) {
+  .input_text_message  {
+    width: 95% !important;
+  }
+	.emoji_picker {
+		right: 400px;
+	}
+}

@@ -1,0 +1,125 @@
+.modal {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: calc(var(--index) * 15);
+	min-width: 250px;
+	min-height: 260px;
+	z-index: 100;
+	padding: 10px;
+	background-color: var(--two-main-bg-color);
+	border-radius: 20px;
+	box-shadow: 0 0 15px 5px black;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+
+
+	h2 {
+		font-size: var(--index);
+		text-align: center;
+		color: var(--font-color);
+	}
+	h3 {
+		font-size: var(--index);
+		text-align: center;
+		color: var(--font-color);
+		margin-top: 15%;
+		align-self: start;
+		color: green;
+	}
+
+	span {
+		display: block;
+		color: #8a95ad;
+		font-size: calc(var(--index) * .8);
+		margin-top: 10%;
+	}
+
+	&>div {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		margin: .5% 0;
+		height: 25%;
+	}
+
+	div:nth-child(5) {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	.profileWrapper {
+		display: flex;
+		width: 100%;
+		margin-bottom: 10%;
+		position: relative;
+	}
+	.delete_btn{
+		background-color: #C0392B;
+		cursor: pointer;
+	}
+
+		img{
+			margin-top: 15%;
+			height: 86px;
+			width: 86px;
+			border-radius: 50%;
+			box-shadow: 0 0 5px 2px #fff;
+		}
+		input[name='name'] {
+			height: 40%;
+			width: 100%;
+			font-size: calc(var(--index) * .9);
+		}
+		.avatarBlock{
+			position: relative;
+		}
+		.custom_file_upload {
+			display: inline-block;
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			cursor: pointer;
+			border: none;
+			background-color: transparent;
+			color: var(--font-color);
+			font-size: calc(var(--index)/1.3);
+			transition: .3s  all ease-in-out;
+			&:hover  {
+				color: green;
+			}
+			
+			input[type='file'] {
+				display: none;
+			}
+	}
+	.save {
+		background-color: #766AC8;
+		width: 100%;
+		padding: 8px;
+		&:hover {
+			box-shadow: 0 0 8px 2px  #fff;
+		}
+	}
+	.exit {
+		background-color: #C0392B;
+		width: 100%;
+		padding: 5px;
+		margin-bottom: 2%;
+		&:hover {
+			box-shadow: 0 0 8px 2px  #fff;
+		}
+	}
+	
+		button {
+			margin: 2% 0;
+			border: none;
+			border-radius: 5px;
+			color: #fff;
+			font-weight: 500;
+			font-size: 1rem;
+		}
+}
+
+

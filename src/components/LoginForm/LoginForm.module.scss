@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css');
+
+$primary-font: 'Open Sans', sans-serif;
+$secondary-font: 'FontAwesome', sans-serif;
+
+* {
+  font-family: #{$primary-font}, #{$secondary-font};
+}
+
+body {
+  background: rgb(52, 56, 61);
+}
+
+
+#wrapper {
+  width:calc(var(--index) * 20);
+	
+	h1 {
+		color: rgb(255, 255, 255);
+		font-size: calc(var(--index) * 2);
+		margin: 20px 0;
+		text-align: center;
+	}	
+
+	#in_btn, #up_btn {
+		background-color: #1C1E21;
+		color: #768196;
+		font-weight: 600;
+		border-radius: 0 10px;
+		cursor: pointer;
+	}
+
+
+
+	p {
+		color: rgb(117, 124, 134);
+    padding: 0 20px;
+    font-weight: 700;
+    font-size: calc(var(--index) * 0.7);
+    margin: 5px 20px 0 0;
+		text-align: center;
+  }
+}
+
+/* === Sign in Form === */
+#signin {
+  height: 90px;
+  width: 100%;
+  border-radius: 8px;
+  position: relative;
+
+  &::before {
+    display: block;
+    position: relative;
+    height: 2px;
+    background: rgb(52, 56, 61);
+    content: '';
+    top: 44px;
+    margin-left: 20px;
+    z-index: 1;
+  }
+
+  input:first-of-type {
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+  }
+
+  input:last-of-type {
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+
+  input[type="text"],
+  input[type="password"],
+  button[type="button"] {
+    background: rgb(28, 30, 33);
+    box-shadow: inset -100px -100px 0 rgb(28, 30, 33); /*Prevent yellow autofill color*/
+    color: rgb(93, 99, 108);
+  }
+
+  input[type="text"],
+  input[type="password"] {
+    position: relative;
+    display: block;
+    width: 85%;
+    height: 45px;
+    border: 0;
+    outline: 0;
+    top: -2px;
+    padding: 0 0 0 20px;
+    font-weight: 700;
+
+    &:focus {
+      color: rgb(255, 255, 255);
+    }
+  }
+
+  button[type="button"] {
+    display: block;
+    position: absolute;
+    width: 52px;
+    height: 52px;
+    color: rgb(52, 56, 61);
+    border-radius: 50%;
+    outline: 0;
+    z-index: 2;
+    top: 25%;
+    right: 5%;
+    border: 6px solid rgb(52, 56, 61);
+    font-size: 1.5rem;
+    text-indent: 0;
+    padding-left: 9px;
+    padding-bottom: 3px;
+    text-align: center;
+
+    &:hover {
+      color: rgb(0, 126, 165);
+      text-shadow: 0 0 10px rgb(0, 126, 165);
+      cursor: pointer;
+    }
+  }
+}
+.input_group {
+	position: relative;
+}
+

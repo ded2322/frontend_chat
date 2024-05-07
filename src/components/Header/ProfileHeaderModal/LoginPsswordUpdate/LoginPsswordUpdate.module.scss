@@ -1,0 +1,70 @@
+.modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: #282C34;
+	z-index: 100;
+	display: flex;
+	justify-content: center;
+	align-items: center ;
+	flex-direction: column;
+}
+
+.modal_content {
+	width: calc(var(--index) * 1.2);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	input {
+		width: 100%;
+		border-radius: 3px;
+	}
+	orm {
+		width: calc(var(--index) * 1.2);
+	}
+	
+	h4 {
+		text-align: center;
+		font-size: calc(var(--index) * 1.2);
+		color: var(--font-color);
+		margin: 6%;
+	}
+	
+	input:first-of-type {
+		border-top-right-radius: 8px;
+		border-top-left-radius: 8px;
+	}
+	
+	input:last-of-type {
+		border-bottom-right-radius: 8px;
+		border-bottom-left-radius: 8px;
+	}
+	
+	
+	input,
+	button {
+		background: rgb(28, 30, 33);
+		box-shadow: inset -100px -100px 0 rgb(28, 30, 33); /*Prevent yellow autofill color*/
+		color: rgb(93, 99, 108);
+		width: calc(var(--index) * 15.2);
+		margin: 5px 0;
+	}
+	
+		input {
+			position: relative;
+			display: block;
+			height: 45px;
+			border: 0;
+			outline: 0;
+			top: -2px;
+			font-weight: 700;
+			height: calc(var(--index) * 2.2);
+			&:focus {
+				color: rgb(255, 255, 255);
+			}
+		}
+	
+	
+}

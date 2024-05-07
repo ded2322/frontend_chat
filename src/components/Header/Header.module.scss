@@ -1,0 +1,48 @@
+.header {
+	grid-area: h;
+	width: 100%;
+	background-color: var(--one-main-bg-color);
+	display: flex;
+	justify-content: space-between;
+	.close {
+		width: calc(var(--index) * 3);
+		height: 100%;
+		color: var(--font-color);
+	}
+	.user {
+		width: auto;
+		height: 90%;
+		border-radius: 50%;
+		overflow: hidden;
+		margin: auto 3%;
+		box-shadow: inherit;
+		img {
+			width: 100%;
+			height: 100%;
+			box-shadow: 0 0 5px var(--font-color);
+		}
+		&:hover {
+			transform: scale(1.1);
+		}
+	}
+	.settings_btn {
+		width: calc(var(--index) * 5);
+		height: 100%;
+		margin: 0 3%;
+		background-color: transparent;
+		border: none;
+		cursor: pointer;
+		.settings {
+			width: 100%;
+			height: 80%;
+			transition: transform 1s;
+	}
+	&:hover .settings{
+		transform: rotateZ(90deg);
+	}
+	&:active .settings{
+		transform: scale(.8);
+	}
+}
+}
+
