@@ -8,11 +8,11 @@
 	
 
   h5 {
-    font-size:calc(var(--index) * 0.8);
+    font-size:calc(var(--index) * 0.7);
     color: green;
     margin-bottom: 5px;
 		margin-right: 35%;
-		max-width: 20ch;
+		max-width: 25ch;
 		min-height: 3ch;
 		white-space: nowrap;
 		text-overflow: ellipsis;
@@ -58,10 +58,12 @@
     }
 
     p {
-      width: 100%;
+      width: 100%;	
       height: auto;
-      word-wrap: break-word; /* Добавленное свойство для переноса слов */
+			font-size: calc((9vw + 4em)/10);
+      word-wrap: break-word; 
 			font-size: calc(var(--index) * 0.9);
+			margin-top: 10px;
     }
   }
 
@@ -102,7 +104,7 @@
   .message_content {
 			margin-left: auto;
 			p{
-				margin-top: 100px;
+				margin-top: 10px;
 			}
     &::after {
       content: '';

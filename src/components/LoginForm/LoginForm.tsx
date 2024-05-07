@@ -40,7 +40,7 @@ export const LoginForm = () => {
 		try {
 			if (statusForm) {
 				if (!validatePassword(password)) return alert('Пароль должен состоять минимум из 7 символов. 1 цифры, 1 буквы верхнего регистра и 1 спецсимвола.');
-				if (!validateUsername(name)) return alert('Имя должно быть 3-10 символов! Спецсимволы использовать нельзя');
+				if (!validateUsername(name)) return alert('Имя должно быть 3-15 символов!');
 				await registerUser(name, password);
 
 				const response = await authUser(name, password);

@@ -28,7 +28,7 @@ export const LoginPsswordUpdate = ({ setLogPassModal }: any) => {
 	const dataUpdate = () => {
 		let UserData : UserData = {};
 		if (loginText.trim() === '' && passText.trim() === '') return;
-		if (loginText.trim()) { UserData.name = loginText; if (!validateUsername(loginText)) return alert('Имя должно быть 3-10 символов! Спецсимволы использовать нельзя');}
+		if (loginText.trim()) { UserData.name = loginText; if (!validateUsername(loginText)) return alert('Имя должно быть 3-15 символов!');}
 		if (passText.trim()) { UserData.password = passText;if (!validatePassword(passText)) return alert('Пароль должен состоять минимум из 7 символов. 1 цифры, 1 буквы верхнего регистра и 1 спецсимвола.');}
 		console.log(UserData)
 		updateDataUser(UserData, value);
